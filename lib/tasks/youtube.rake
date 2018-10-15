@@ -1,14 +1,10 @@
 require 'google/apis/youtube_v3'
 
-def registrated_yotuber?
-
-end
-
 namespace :youtube do
-  task :videoget do
+  task :videoget => :environment  do
     youtube = Google::Apis::YoutubeV3::YouTubeService.new
     youtube.key = ENV['YOUTUBE_API_KEY']
-    channel_ids = ['UC2ZQJqk4jVeI1e6jk2f3RkQ']
+    channel_ids = Youtuber.all
 
     channel_ids.each do |channel_id|
       results = youtube.list_searches('id,snippet', channel_id: channel_id,
