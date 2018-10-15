@@ -1,5 +1,9 @@
 require 'google/apis/youtube_v3'
 
+def registrated_yotuber?
+
+end
+
 namespace :youtube do
   task :videoget do
     youtube = Google::Apis::YoutubeV3::YouTubeService.new
@@ -8,10 +12,13 @@ namespace :youtube do
 
     channel_ids.each do |channel_id|
       results = youtube.list_searches('id,snippet', channel_id: channel_id,
-                                      order: 'date', max_results: 50).items
-      results.each do |result|
-        # video = result.id
-        # video_id = video.video_id
+                                      order: 'date', max_results: 5)
+
+      Youtuber.find(channel_id: channel_id)
+
+      results.items.each do |result|
+        video = result.id
+        video_id = video.video_id
         snippet = result.snippet
         title = snippet.title
         # youtuber = snippet.channel_title
