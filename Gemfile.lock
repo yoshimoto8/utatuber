@@ -56,6 +56,8 @@ GEM
     bindex (0.5.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
+    bootsnap (1.3.2)
+      msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (3.9.0)
@@ -150,6 +152,7 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
+    msgpack (1.2.4)
     multi_json (1.13.1)
     mysql2 (0.5.2)
     nio4r (2.3.1)
@@ -293,6 +296,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bootsnap
   byebug
   capybara (>= 2.15, < 4.0)
   carrierwave
@@ -319,7 +323,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
-  uglifier (>= 1.3.0)
+  uglifier (>= 1.3bu.0)
   web-console (>= 3.3.0)
   whenever
 

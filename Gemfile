@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'coffee-rails', '~> 4.2'
 gem 'carrierwave'
 #D
+gem 'bootsnap', require: false
 gem 'devise' #https://qiita.com/cigalecigales/items/73d7bd7ec59a001ccd74
 gem 'dotenv-rails', groups: [:development, :test]
 #J
@@ -16,7 +17,7 @@ gem 'kaminari'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'mini_magick'
 #U
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 1.3bu.0'
 #T
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
