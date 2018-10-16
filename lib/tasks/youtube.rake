@@ -1,5 +1,6 @@
 require 'google/apis/youtube_v3'
 
+# 今youtubeのデータがない状態 seedデータを作る
 namespace :youtube do
   task :videoget => :environment  do
     youtube = Google::Apis::YoutubeV3::YouTubeService.new
@@ -22,6 +23,8 @@ namespace :youtube do
           video_description: snippet.description,
           published_at: snippet.published_at
         )
+        unless Movie.exsits?(video_id: video.video_id)
+        end
       end
     end
   end
