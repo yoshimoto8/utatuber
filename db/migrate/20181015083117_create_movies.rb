@@ -9,6 +9,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.text :video_description
       t.date :published_at, null: false
       t.integer :play_count
+      t.integer :youtuber_id
       t.timestamps
     end
   end

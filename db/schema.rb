@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_10_15_083117) do
     t.text "video_description"
     t.date "published_at", null: false
     t.integer "play_count"
+    t.integer "youtuber_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,7 +41,6 @@ ActiveRecord::Schema.define(version: 2018_10_15_083117) do
   create_table "youtubers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "channel_id"
-    t.integer "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
